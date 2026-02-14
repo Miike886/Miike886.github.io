@@ -13,6 +13,7 @@ body {
     position: relative;
     image-rendering: pixelated;
     color: #3a2e2e;
+    --graphite: #2a2a2f;
 }
 
 .hearts {
@@ -78,10 +79,39 @@ body {
 }
 
 .intro-paper {
-    width: min(92vw, 480px);
+    width: min(92vw, 520px);
     display: grid;
     place-items: center;
-    gap: 14px;
+    gap: 12px;
+    padding: 26px 22px;
+    border: 4px solid #d88896;
+    background:
+        linear-gradient(45deg, #fff0f4 25%, transparent 25%),
+        linear-gradient(-45deg, #fff0f4 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #fff0f4 75%),
+        linear-gradient(-45deg, transparent 75%, #fff0f4 75%);
+    background-size: 14px 14px;
+    background-position: 0 0, 0 7px, 7px -7px, -7px 0;
+    box-shadow: 10px 10px 0 #f3b9c5;
+    position: relative;
+}
+
+.intro-paper::before,
+.intro-paper::after {
+    content: "\2665";
+    position: absolute;
+    color: #e16b86;
+    font-size: 14px;
+}
+
+.intro-paper::before {
+    left: 12px;
+    top: 10px;
+}
+
+.intro-paper::after {
+    right: 12px;
+    bottom: 10px;
 }
 
 .envelope-btn {
@@ -90,6 +120,11 @@ body {
     background: transparent;
     cursor: pointer;
     padding: 0;
+    transition: transform 0.15s ease;
+}
+
+.envelope-btn:hover {
+    transform: translateY(-3px);
 }
 
 .pixel-envelope {
@@ -126,34 +161,30 @@ body {
 .envelope-heart {
     position: absolute;
     left: 50%;
-    top: 56%;
-    width: 16px;
-    height: 16px;
+    top: 58%;
+    width: 6px;
+    height: 6px;
     background: #f25f78;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.envelope-heart::before,
-.envelope-heart::after {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: inherit;
-}
-
-.envelope-heart::before {
-    left: -8px;
-}
-
-.envelope-heart::after {
-    top: -8px;
+    transform: translate(-50%, -50%);
+    box-shadow:
+        -6px 0 #f25f78,
+        6px 0 #f25f78,
+        -6px 6px #f25f78,
+        0 6px #f25f78,
+        6px 6px #f25f78,
+        0 12px #f25f78;
 }
 
 .intro-caption {
     margin: 0;
     font-size: clamp(11px, 2vw, 18px);
+    color: #42353b;
+}
+
+.intro-sub {
+    margin: 0;
+    font-size: clamp(9px, 1.5vw, 12px);
+    color: #c05f74;
 }
 
 .card {
