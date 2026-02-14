@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta para Berenice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <section class="intro-letter" id="introLetter">
+    <article class="intro-paper">
+      <button class="envelope-btn" id="openExperienceBtn" type="button" aria-label="Abrir carta">
+        <span class="pixel-envelope">
+          <span class="envelope-heart"></span>
+        </span>
+      </button>
+      <p class="intro-caption">♡ Carta para Berenice ♡</p>
+    </article>
+  </section>
+
+  <main class="card hidden" id="mainCard">
+    <section class="pixel-window">
+      <header class="window-top">
+        <span>AMOR</span>
+        <span>- □ ✕</span>
+      </header>
+
+      <div class="window-icons">
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+      </div>
+
+      <article class="window-body">
+        <h1>Berenice, quieres ser mi San Valentin?</h1>
+        <div class="pixel-mascot" aria-hidden="true">
+          <div class="pixel-mouse">
+            <span class="mouse-ear left"></span>
+            <span class="mouse-ear right"></span>
+            <span class="mouse-eye left"></span>
+            <span class="mouse-eye right"></span>
+            <span class="mouse-nose"></span>
+            <span class="mouse-body"></span>
+            <span class="mouse-tail"></span>
+          </div>
+          <div class="pixel-heart-big"></div>
+        </div>
+
+        <section class="buttons" id="buttons">
+          <button class="btn yes-btn" id="yesBtn" type="button">SI</button>
+
+          <div class="no-wrapper" id="noWrapper">
+            <button class="btn no-btn" id="noBtn" type="button">NO</button>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <section class="Letter-window" id="letterWindow" aria-hidden="true">
+    <article class="letter-content">
+      <h2>Sabia que dirias que si, Berenice</h2>
+      <p>Prometo una cita bonita, risas y muchos postres contigo.</p>
+      <button class="btn close-btn" id="closeBtn" type="button">Cerrar</button>
+    </article>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
